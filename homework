@@ -1,0 +1,67 @@
+function BestProfit(arr) {  \\q1
+    let min = arr[0];
+    let index_min = 0 ;
+    let index_max = 0 ;
+    let max = arr[0];
+    let day_min = "";
+    let day_max = "" ;
+   
+   
+    
+    
+
+    arr.forEach((element ,i) => {
+        if (min > element){
+        min = element;
+        max = element ;
+         index_min = i ;
+        index_max = i ;
+        }
+       
+    });
+    
+    for (let i = 0 ;i <arr.length ;i++){
+        if (max < arr[i] && (i >=index_max)){
+            max = arr[i]; ;
+            index_max = i ;
+            
+        }
+        
+      
+        
+    };
+    switch (index_max){
+        case 0: day_max = "saturday";
+        break;
+        case 1: day_max = "sunday";
+        break;
+        case 2: day_max = "monday";
+        break;
+        case 3: day_max = "tuesday";
+        break;
+        case 4: day_max = "wednesday";
+        break;
+        case 5: day_max = "thursday";
+        default : day_max = "any day";
+        break;
+    }
+
+    switch (index_min){
+        case 0: day_min = "saturday";
+        break;
+        case 1: day_min = "sunday";
+        break;
+        case 2: day_min = "monday";
+        break;
+        case 3: day_min = "tuesday";
+        break;
+        case 4: day_min = "wednesday";
+        break;
+        case 5: day_min = "thursday";
+        default : day_min = "any day";
+        break;
+    }
+    console.log("we buy on "+day_min +" and sell on "+day_max);
+}
+BestProfit([150, 146, 142, 143, 145, 144])
+
