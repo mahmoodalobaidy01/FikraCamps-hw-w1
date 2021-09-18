@@ -36,3 +36,9 @@ if(a[i].price > a[i+1].price){
     return a;
 }
 console.log(sortDrinkByPrice(drinks))
+function toArray(a){
+    const entries = Object.entries(a);
+
+return entries;
+}
+console.log(toArray({ shrimp: 15, tots: 12 }))
