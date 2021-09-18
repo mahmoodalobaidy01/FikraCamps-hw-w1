@@ -1,19 +1,19 @@
 
 function getSalary (){
   return new Promise((resolve)=> setTimeout(() => {
-       resolve (1000); 
+       resolve (33000); 
     },500))
     
 }
 function subText(salary){
     return new Promise((resolve)=> setTimeout(() => {
-        resolve (salary-salary*0.07); 
+        resolve (salary-salary*0.75); 
      },500))
 
 }
 function subRent(salary){
     return new Promise((resolve)=> setTimeout(() => {
-        resolve (salary-500); 
+        resolve (salary-5000); 
      },500))
 
 }
